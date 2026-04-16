@@ -29,7 +29,7 @@
     <section class="rise d1">
       <div class="page-kicker">Room 02 · Prompt Library</div>
       <h1 class="page-title">From <em>pain point</em> <br/>to a runnable <span class="sa">pilot prompt</span>.</h1>
-      <p class="page-lead">Six prompts, designed to be run in order. Each one refines the thinking from the last &mdash; from a grounding research brief, through diagnosis and ideation, to a brief and finally a platform-ready build prompt. Use them with any frontier LLM.</p>
+      <p class="page-lead">Five prompts, designed to be run in order. Each one refines the thinking from the last &mdash; from discovery and diagnosis, through ideation, to a brief and finally a platform-ready build prompt. Use them with any frontier LLM.</p>
 
     </section>
 
@@ -39,19 +39,18 @@
       <div>
         <h2 style="font-family:var(--font-display); font-weight:500; font-size:28px; letter-spacing:-0.01em; margin:0 0 10px;">How the flow works</h2>
         <p style="color:var(--ink-soft); font-size:15.5px; max-width: 50ch; line-height:1.6;">
-          Paste the <strong>Learn</strong> prompt to ground the model in the topic, then move through <strong>Widen</strong> and <strong>Diagnose</strong> to understand the problem. <strong>Ideate</strong> converges on a pilot concept. <strong>Brief</strong> turns it into a one-pager. <strong>Build</strong> writes the product requirements prompt you ship to a build platform (Cursor, v0, Bolt, Replit Agent, etc.).
+          Start with <strong>Widen</strong> to map personas and pains, then <strong>Diagnose</strong> to find root causes. <strong>Ideate</strong> converges on a pilot concept. <strong>Brief</strong> turns it into a one-pager. <strong>Build</strong> writes the product requirements prompt you ship to a build platform (Lovable, v0, Google AI Studio, etc.).
         </p>
         <p style="color:var(--muted); font-size:13.5px; max-width: 50ch; margin-top:14px;">Tip: replace bracketed tokens like <code style="font-family:var(--font-mono); background:var(--paper-2); padding:2px 6px; border-radius:4px;">[selected challenge]</code> with the challenge you picked from Room 01.</p>
       </div>
 
       <div class="prompt-flow">
         <h4>Prompt sequence</h4>
-        <div class="flow-step"><span class="n">01</span><span class="name">Learn</span><span class="arrow-small">&darr;</span></div>
-        <div class="flow-step"><span class="n">02</span><span class="name">Widen</span><span class="arrow-small">&darr;</span></div>
-        <div class="flow-step"><span class="n">03</span><span class="name">Diagnose</span><span class="arrow-small">&darr;</span></div>
-        <div class="flow-step"><span class="n">04</span><span class="name">Ideate</span><span class="arrow-small">&darr;</span></div>
-        <div class="flow-step"><span class="n">05</span><span class="name">Brief</span><span class="arrow-small">&darr;</span></div>
-        <div class="flow-step"><span class="n">06</span><span class="name">Build</span><span class="arrow-small">&rarr;</span></div>
+        <div class="flow-step"><span class="n">01</span><span class="name">Widen</span><span class="arrow-small">&darr;</span></div>
+        <div class="flow-step"><span class="n">02</span><span class="name">Diagnose</span><span class="arrow-small">&darr;</span></div>
+        <div class="flow-step"><span class="n">03</span><span class="name">Ideate</span><span class="arrow-small">&darr;</span></div>
+        <div class="flow-step"><span class="n">04</span><span class="name">Brief</span><span class="arrow-small">&darr;</span></div>
+        <div class="flow-step"><span class="n">05</span><span class="name">Build</span><span class="arrow-small">&rarr;</span></div>
       </div>
     </section>
 
@@ -83,34 +82,10 @@
 
     <section class="prompt-list">
 
-      <!-- 01 Learn -->
+      <!-- 01 Widen -->
       <article class="prompt-card rise d2">
         <header class="prompt-head">
-          <span class="prompt-step">STEP 01 / GROUND</span>
-          <h3 class="prompt-name"><em>Learn</em></h3>
-          <p class="prompt-subtitle">Feed the model background context before anything else.</p>
-        </header>
-        <div class="prompt-body">
-          <div class="prompt-tags">
-            <span class="tag">context-seed</span>
-            <span class="tag">no-action</span>
-            <span class="tag">attach-report</span>
-          </div>
-          <div class="prompt-text" id="p-learn">Here is a deep research report for the topic we are going to discuss today. No action required. Use this report as additional context for your responses apart from web search and other resources.</div>
-          <div class="prompt-actions">
-            <span style="font-family:var(--font-mono); font-size:11px; color:var(--muted); letter-spacing:.12em;">PASTE FIRST · ATTACH REPORT</span>
-            <button class="btn" data-target="p-learn" aria-label="Copy Learn prompt">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
-              Copy prompt
-            </button>
-          </div>
-        </div>
-      </article>
-
-      <!-- 02 Widen -->
-      <article class="prompt-card rise d2">
-        <header class="prompt-head">
-          <span class="prompt-step">STEP 02 / DISCOVER</span>
+          <span class="prompt-step">STEP 01 / DISCOVER</span>
           <h3 class="prompt-name"><em>Widen</em></h3>
           <p class="prompt-subtitle">Map personas, pains, workarounds and success metrics.</p>
         </header>
@@ -130,10 +105,10 @@
         </div>
       </article>
 
-      <!-- 03 Diagnose -->
+      <!-- 02 Diagnose -->
       <article class="prompt-card rise d3">
         <header class="prompt-head">
-          <span class="prompt-step">STEP 03 / ROOT-CAUSE</span>
+          <span class="prompt-step">STEP 02 / ROOT-CAUSE</span>
           <h3 class="prompt-name"><em>Diagnose</em></h3>
           <p class="prompt-subtitle">Pick the top pains and run a structured Five Whys.</p>
         </header>
@@ -154,10 +129,10 @@
         </div>
       </article>
 
-      <!-- 04 Ideation -->
+      <!-- 03 Ideation -->
       <article class="prompt-card rise d3">
         <header class="prompt-head">
-          <span class="prompt-step">STEP 04 / CONVERGE</span>
+          <span class="prompt-step">STEP 03 / CONVERGE</span>
           <h3 class="prompt-name"><em>Ideate</em></h3>
           <p class="prompt-subtitle">Cluster AI-driven ideas. Score. Recommend a pilot.</p>
         </header>
@@ -184,10 +159,10 @@ Score each on Impact &times; Feasibility &times; Confidence &times; Time-to-Valu
         </div>
       </article>
 
-      <!-- 05 Brief -->
+      <!-- 04 Brief -->
       <article class="prompt-card rise d4">
         <header class="prompt-head">
-          <span class="prompt-step">STEP 05 / CONDENSE</span>
+          <span class="prompt-step">STEP 04 / CONDENSE</span>
           <h3 class="prompt-name"><em>Brief</em></h3>
           <p class="prompt-subtitle">Turn the chosen pilot into a one-page pilot brief.</p>
         </header>
@@ -208,10 +183,10 @@ Score each on Impact &times; Feasibility &times; Confidence &times; Time-to-Valu
         </div>
       </article>
 
-      <!-- 06 Build -->
+      <!-- 05 Build -->
       <article class="prompt-card rise d4">
         <header class="prompt-head">
-          <span class="prompt-step">STEP 06 / SHIP</span>
+          <span class="prompt-step">STEP 05 / SHIP</span>
           <h3 class="prompt-name"><em>Build</em></h3>
           <p class="prompt-subtitle">Generate the platform-ready product requirements prompt.</p>
         </header>
